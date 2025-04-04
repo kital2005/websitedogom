@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img website/favicon_io/favicon.ico" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .product-image{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="trangchu.html">
+            <img class="logo" src="./img website/logo1.png" alt="" height="130px" width="130px" />
+        </a>
+        <!-- Thanh điều hướng -->
+        <nav>
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="">Giới thiệu</a>
+            <a href="">Đăng nhập</a>
+            <a href="">Đăng ký</a>
+            <a href="">Sản phẩm</a>
+            <a href="./giohang.html">Giỏ hàng</a>
+            <a href="">Liên hệ</a>
+        </nav>
+        <!-- Biểu tượng tìm kiếm và giỏ hàng -->
+        <div class="icons">
+            <div class="search-container">
+                <i class="fas fa-search icon"></i>
+                <input type="text" placeholder="Nhập nội dung cần tìm">
+            </div>
+            <a href="#" class="icon"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+    <main>
+        <main>
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="./phong/1.jpg" alt="Tên sản phẩm" width="300px" height="300px"/>
+                </div>
+                <div class="product-details">
+                    <h1>Tên sản phẩm</h1>
+                    <p>Chi tiết sản phẩm: Mô tả ngắn gọn về sản phẩm. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatibus expedita commodi obcaecati. Facere sit inventore dolorum. Facere autem, quasi dicta odio, illum necessitatibus aspernatur ea quidem nesciunt eligendi expedita?</p>
+                    <p class="price">Giá: 500.000 VNĐ</p>
+                    <button class="add-to-cart" onclick="addToCart()">Đặt hàng</button>
+                </div>
+            </div>
+            <div>
+                <h1>Sản Phẩm Tương Tự</h1>
+                <div class="product-container">
+                    <div class="product-item">
+                        <img src="./img website/ảnh-tủ1.png" alt="Tủ gỗ">
+                        <p>Tủ gỗ</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                    <div class="product-item">
+                        <img src="./img website/ảnh-ghế.png" alt="Ghế gỗ">
+                        <p>Ghế gỗ</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                    <div class="product-item">
+                        <img src="./phong/1.png" alt="Ấm sứ">
+                        <p>Ấm sứ</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                    <div class="product-item">
+                        <img src="./phong/3.png" alt="Bình sành">
+                        <p>Bình sành</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                    <div class="product-item">
+                        <img src="./img website/Ống hút trte.jpg" alt="Ống hút tre">
+                        <p>Ống hút tre</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                    <div class="product-item">
+                        <img src="./img website/đèn treo mây tre.jpg" alt="Đèn treo mây tre">
+                        <p>Đèn treo mây tre</p>
+                        <a href="chi-tiet-san-pham.html" class="view-details">Xem chi tiết</a> <!-- Nút xem chi tiết -->
+                    </div>
+                
+                </div>
+    
+            </div>
+        </main>
+    <footer>
+        <div class="footer-left">
+            <img src="./img website/logo1.png" alt="Logo">
+        </div>
+        <div class="footer-center">
+            <p><b>© 2025 Bản quyền thuộc về Golden Fingers</b></p>
+            <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="" target="_blank"><i class="fab fa-pinterest"></i></a>
+            
+        </div>
+        
+        <div class="footer-right">
+            <p><b>Email: goldentfingers@gmail.com</b></p>
+        </div>
+        <div class="footer-right">
+            <p><b>Hotline: 0000000000000</b></p>
+        </div>
+        <!-- Nút quay về đầu trang -->
+    <a href="#" class="back-to-top" title="Quay về đầu trang">↑</a>
+        </footer>
+        <script>
+            function addToCart() {
+                const product = {
+                    name: "Tên sản phẩm",
+                    price: 500000,
+                    image: "./img website/product-image.png"
+                };
+        
+                // Lấy giỏ hàng từ localStorage
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                // Thêm sản phẩm vào giỏ hàng
+                cart.push(product);
+        
+                // Lưu giỏ hàng trở lại localStorage
+                localStorage.setItem('cart', JSON.stringify(cart));
+        
+                alert("Sản phẩm đã được thêm vào giỏ hàng!");
+            }
+        </script>
+</body>
+</html>

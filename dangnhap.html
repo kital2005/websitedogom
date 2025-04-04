@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="./favicons/favicon-16x16.png" type="image/vnd.microsoft.icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body>
+    <header>
+        <!-- Logo -->
+        <a href="trangchu.html">
+            <img class="logo" src="./logo_1.png" alt="Logo" />
+            
+        </a>
+        <!-- Thanh điều hướng -->
+        <nav>
+            <a href="./trangchu.html">Golden Fingers</a>
+            <a href="trangchu.html">Trang chủ</a>
+            <a href="./Giới thiệu.html">Giới thiệu</a>
+            <a href="./sanpham.html">Sản phẩm</a>
+            <a href="./giohang.html">Giỏ hàng</a>
+            <a href="./dangnhap.html" class="active">Đăng nhập</a>
+            <a href="./dangky.html">Đăng ký</a>
+            <a href="./testlienhe.html" >Liên hệ</a>
+        </nav>
+        <!-- Biểu tượng tìm kiếm và giỏ hàng -->
+        <div class="icons">
+            <div class="search-container">
+                <i class="fas fa-search icon"></i>
+                <input type="text" placeholder="Nhập nội dung cần tìm">
+            </div>
+            <a href="./giohang.html" class="icon"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+        </header>
+    <div class="fix-lg">
+    <div class="dangnhap-page">
+        <div class="form">
+
+            <form class="dangnhap-form" method="post" action="login.php">
+                <h2 class="text-lg">ĐĂNG NHẬP</h2>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Mật Khẩu" required>
+                <button type="submit" name="send2">Đăng Nhập</button>
+                <p class="message">Không có tài khoản? <a href="dangky.html">Đăng ký</a></p>
+            </form>
+
+        </div>
+    </div>
+</div>
+<footer>
+    
+    <div class="footer-left">
+        <img src="./logo_1.png" alt="Logo">
+    </div>
+    <div class="footer-center">
+        <p><b>© 2025 Bản quyền thuộc về Golden Fingers</b></p>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+    </div>
+    <div class="footer-right">
+        <p><b>Email: goldenfingers@gmail.com</b></p>
+        <p><b>Hotline: 1800-123-456</b></p>
+    </div>
+    
+    <a href="#" class="back-to-top" title="Quay về đầu trang">↑</a>
+    </footer>
+    
+       <!-- js cho header và chung -->
+       <script src="./script.js"></script>
+   
+ 
+</body>
+
+
+</html>
